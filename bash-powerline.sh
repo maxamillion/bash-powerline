@@ -6,8 +6,8 @@ __powerline() {
     PS_SYMBOL_DARWIN=''
     PS_SYMBOL_LINUX='$'
     PS_SYMBOL_OTHER='%'
-    PS_DIVIDER_SYMBOL='' # alternatively 
-    GIT_BRANCH_SYMBOL=' '
+    PS_DIVIDER_SYMBOL='≫'
+    GIT_BRANCH_SYMBOL='⑂ '
     GIT_BRANCH_CHANGED_SYMBOL='+'
     GIT_NEED_PUSH_SYMBOL='⇡'
     GIT_NEED_PULL_SYMBOL='⇣'
@@ -101,10 +101,10 @@ __powerline() {
             local BG_EXIT="$BG_RED"
         fi
 
-        PS1="$BG_BLUE \t|\u@\h $PS_DIVIDER_SYMBOL$RESET"
-        PS1+="$BG_GREY $FG_BLACK \w $PS_DIVIDER_SYMBOL$RESET"
-        PS1+="$BG_BLUE$(__git_info) $PS_DIVIDER_SYMBOL$RESET"
-        PS1+="\n$BG_EXIT ($EXIT_CODE)$PS_SYMBOL $PS_DIVIDER_SYMBOL$RESET "
+        PS1="$BG_BLUE \t|\u@\h $PS_DIVIDER_SYMBOL $RESET"
+        PS1+="$BG_GREY $FG_BLACK \w $PS_DIVIDER_SYMBOL $RESET"
+        PS1+="$BG_BLUE$(__git_info) $PS_DIVIDER_SYMBOL $RESET"
+        PS1+="\n$BG_EXIT↳ ($EXIT_CODE)$PS_SYMBOL $PS_DIVIDER_SYMBOL $RESET "
     }
 
     PROMPT_COMMAND=ps1
