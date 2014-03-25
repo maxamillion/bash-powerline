@@ -1,9 +1,10 @@
-# bash-powerline
+# bash-powerline - FORK
 
 Powerline for Bash in pure Bash script. 
 
-![bash-powerline](https://raw.github.com/riobard/bash-powerline/master/screenshots/solarized-light-source-code-pro.png)
-![bash-powerline](https://raw.github.com/riobard/bash-powerline/master/screenshots/solarized-dark-monaco.png)
+Forked from https://github.com/riobard/bash-powerline purely to make edits 
+based on preference.
+
 
 ## Features
 
@@ -22,16 +23,11 @@ Powerline for Bash in pure Bash script.
 
 Download the Bash script
 
-    curl https://raw.github.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
+    curl > ~/.bash-powerline.sh
 
 And source it in your `.bashrc`
 
     source ~/.bash-powerline.sh
-
-For best result, use [Solarized
-colorscheme](https://github.com/altercation/solarized) for your terminal
-emulator. Or hack your own colorscheme by modifying the script. It's really
-easy.
 
 
 ## Why?
@@ -51,6 +47,7 @@ non-retina screens. I'd rather stick with existing unicode symbols in the fonts.
 
 
 ## See also
+* [bash-powerline](https://github.com/riobard/bash-powerline): Original bash-powerline (Where this is forked from)
 * [powerline](https://github.com/Lokaltog/powerline): Unified Powerline
   written in Python. This is the future of all Powerline derivatives. 
 * [vim-powerline](https://github.com/Lokaltog/vim-powerline): Powerline in Vim

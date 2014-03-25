@@ -6,7 +6,8 @@ __powerline() {
     PS_SYMBOL_DARWIN=''
     PS_SYMBOL_LINUX='$'
     PS_SYMBOL_OTHER='%'
-    GIT_BRANCH_SYMBOL='⑂ '
+    PS_DIVIDER_SYMBOL='' # alternatively 
+    GIT_BRANCH_SYMBOL=' '
     GIT_BRANCH_CHANGED_SYMBOL='+'
     GIT_NEED_PUSH_SYMBOL='⇡'
     GIT_NEED_PULL_SYMBOL='⇣'
@@ -38,6 +39,7 @@ __powerline() {
     FG_BLUE="\[$(tput setaf 4)\]"
     FG_CYAN="\[$(tput setaf 6)\]"
     FG_GREEN="\[$(tput setaf 2)\]"
+    FG_BLACK="\[$(tput setaf 0)\]"
 
     BG_YELLOW="\[$(tput setab 3)\]"
     BG_ORANGE="\[$(tput setab 9)\]"
@@ -47,6 +49,7 @@ __powerline() {
     BG_BLUE="\[$(tput setab 4)\]"
     BG_CYAN="\[$(tput setab 6)\]"
     BG_GREEN="\[$(tput setab 2)\]"
+    BG_GREY="\[$(tput setab 7)\]"
 
     DIM="\[$(tput dim)\]"
     REVERSE="\[$(tput rev)\]"
@@ -91,15 +94,17 @@ __powerline() {
     ps1() {
         # Check the exit code of the previous command and display different
         # colors in the prompt accordingly. 
-        if [ $? -eq 0 ]; then
+        local EXIT_CODE=$?
+        if [ $EXIT_CODE -eq 0 ]; then
             local BG_EXIT="$BG_GREEN"
         else
             local BG_EXIT="$BG_RED"
         fi
 
-        PS1="$BG_BASE1$FG_BASE3 \w $RESET"
-        PS1+="$BG_BLUE$FG_BASE3$(__git_info)$RESET"
-        PS1+="$BG_EXIT$FG_BASE3 $PS_SYMBOL $RESET "
+        PS1="$BG_BLUE \t|\u@\h $PS_DIVIDER_SYMBOL$RESET"
+        PS1+="$BG_GREY $FG_BLACK \w $PS_DIVIDER_SYMBOL$RESET"
+        PS1+="$BG_BLUE$(__git_info) $PS_DIVIDER_SYMBOL$RESET"
+        PS1+="\n$BG_EXIT ($EXIT_CODE)$PS_SYMBOL $PS_DIVIDER_SYMBOL$RESET "
     }
 
     PROMPT_COMMAND=ps1
