@@ -23,7 +23,7 @@ based on preference.
 
 Download the Bash script
 
-    curl > ~/.bash-powerline.sh
+    curl https://raw.githubusercontent.com/maxamillion/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh
 
 And source it in your `.bashrc`
 
