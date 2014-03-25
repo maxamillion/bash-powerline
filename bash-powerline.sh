@@ -88,7 +88,7 @@ __powerline() {
         [ -n "$behindN" ] && marks+=" $GIT_NEED_PULL_SYMBOL$behindN"
 
         # print the git branch segment without a trailing newline
-        printf " $GIT_BRANCH_SYMBOL$branch$marks "
+        printf " $GIT_BRANCH_SYMBOL$branch$marks $PS_DIVIDER_SYMBOL "
     }
 
     ps1() {
@@ -96,14 +96,14 @@ __powerline() {
         # colors in the prompt accordingly. 
         local EXIT_CODE=$?
         if [ $EXIT_CODE -eq 0 ]; then
-            local BG_EXIT="$BG_GREEN"
+            local BG_EXIT="$BG_CYAN"
         else
             local BG_EXIT="$BG_RED"
         fi
 
         PS1="$BG_BLUE \t|\u@\h $PS_DIVIDER_SYMBOL $RESET"
         PS1+="$BG_GREY $FG_BLACK \w $PS_DIVIDER_SYMBOL $RESET"
-        PS1+="$BG_BLUE$(__git_info) $PS_DIVIDER_SYMBOL $RESET"
+        PS1+="$BG_GREEN$(__git_info)$RESET"
         PS1+="\n$BG_EXIT↳ ($EXIT_CODE)$PS_SYMBOL $PS_DIVIDER_SYMBOL $RESET "
     }
 
