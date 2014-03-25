@@ -7,6 +7,7 @@ based on preference.
 
 ![bash-powerline](https://raw.githubusercontent.com/maxamillion/bash-powerline/master/screenshots/blbg_whfg_tango.png)
 
+
 ## Most of the rest of the README from the original (upstream) project
 
 ## Features
