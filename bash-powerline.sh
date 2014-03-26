@@ -104,7 +104,7 @@ __powerline() {
         PS1="$BG_BLUE\t|\u@\h $PS_DIVIDER_SYMBOL $RESET"
         PS1+="$BG_GREY$FG_BLACK \w $PS_DIVIDER_SYMBOL $RESET"
         PS1+="$BG_GREEN$(__git_info)$RESET"
-        PS1+="\n$BG_EXIT↳ ($EXIT_CODE)$PS_SYMBOL $PS_DIVIDER_SYMBOL $RESET "
+        PS1+="\n$BG_EXIT($EXIT_CODE)$RESET$PS_SYMBOL "
     }
 
     PROMPT_COMMAND=ps1
