@@ -5,7 +5,7 @@ Powerline for Bash in pure Bash script.
 Forked from https://github.com/riobard/bash-powerline purely to make edits 
 based on preference.
 
-![bash-powerline](https://github.com/maxamillion/bash-powerline/blob/7c87db7d7d78f1f47f8b8521d045b78416d9c4d7/screenshots/blbg_whfg_gnome3.png)
+![bash-powerline](https://raw.githubusercontent.com/maxamillion/bash-powerline/7c87db7d7d78f1f47f8b8521d045b78416d9c4d7/screenshots/blbg_whfg_gnome3.png)
 
 
 ## Most of the rest of the README from the original (upstream) project
